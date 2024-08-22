@@ -18,6 +18,9 @@ label {
     font-size: 14px;
     font-family: Pretendard;
 }
+input {
+    outline: none;
+}
 /* ================================================================================= 메인 페이지 css 시작 =========================================================================================== */
 .header-navbar {
     position: static;
@@ -78,17 +81,29 @@ a {
     left: 0;
     top: 80px;
     z-index: 999;
-    padding-left: 180px;
     font-size: 15px;
     display: none;
 }
+.menu-pan-box {
+    display: flex;
+    max-width: 1799px;
+    align-items: center;
+    margin: 0px;
+    justify-content: center;
+}
 .menu-category{
-    float: left;
-    margin: 30px 0;
+    margin: 0;
+    width: 300px;
+}
+.main-product {
+    height: auto;
+    max-width: 250px;
+    width: 100%;
+    display: flex;
 }
 .category {
-    padding: 20px;
-    margin-right: 100px;
+    padding-left: 0px;
+    margin : 40px 60px 0px 60px
 }
 /* 700px 이하일 경우 토글버튼 css */
 .navbar-togglebtn {
@@ -239,20 +254,52 @@ a {
 .loginPage-account-btn:hover{
     background-color: #2E2E2E;
 }
-.loginPage-information-text {
-    width: 325px;
-    height: 35px;
+.loginPage-information-text-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #f4f4f4;
+    width: 320px;
+    height: 40px;
     border-radius: 4px;
-    font-size: 14px;
-    border-color: #E6E6E6;
+    justify-content: space-between;
+    padding-left: 12px;
+}
+.loginPage-information-text-box:hover {
+    box-shadow: inset 0px 0px 0px 0.3px #666;
+}
+.loginPage-information-text {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    width: 325px;
 }
 /*================================================================================= 회원가입 페이지 css 시작 =========================================================================================== */
-.accountPage-information-text {
-    width: 325px;
-    height: 35px;
+.accountPage-information-text-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #f4f4f4;
+    width: 320px;
+    height: 40px;
     border-radius: 4px;
-    font-size: 14px;
-    border-color: #E6E6E6;
+    justify-content: space-between;
+    padding-left: 12px;
+}
+.accountPage-information-text-box:hover {
+    box-shadow: inset 0px 0px 0px 0.3px #666;
+}
+.accountPage-information-text {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    width: 325px;
 }
 .accountPage-account-btn{
     width: 332px;
