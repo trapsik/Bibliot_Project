@@ -24,7 +24,13 @@ $('.menu-pan').mouseenter(function(){
     })
 })
 $('.menu-pan').mouseleave(function(){
-    $('.menu-pan').eq($(this).index()).css({
-        display:'none'
-    })
+    let menu_i = $(this).index();
+    
+    if(menu_i < 4) {
+        $('.menu-pan').css({
+            display:'none'
+        }).eq($(this).index()).css({
+            display:'none'
+        })
+    }
 })
