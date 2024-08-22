@@ -162,7 +162,7 @@ a {
     font-family: Pretendard;
     font-weight: 500;
 }
-.btn1 {
+.details-btn {
     margin-right: 10px;
     padding: 0;
     position: relative;
@@ -176,7 +176,7 @@ a {
     font-family: Pretendard;
     font-weight: 600;
 }
-.btn2 {
+.inquiry-btn {
     margin-left: 10px;
     padding: 0;
     position: relative;
