@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비블리엇</title>
+    <!-- =====================================================================================CSS 부분================================================================================================ -->
+    <style>
+        /* 폰트 임포트 부분 */
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+        body {
+            margin: 0 auto;
+            padding: 0;
+            display: block;
+            height: fit-content;
+            width: 100%;
+            overflow-x: hidden;
+            font-family: Pretendard;
+        }
+        * {
+            outline-offset: 2px;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        .header-navbar {
+            position: static;
+        }
+        .navbar {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+        }
+        /* 로고 */
+        .navbar-logo{ 
+            display: flex;
+            margin-left: 32px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        /* 제품 / 회사정보 / 채용정보 / 문의 게시판  */
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            /* margin-left: 40px; */
+            padding: 0;
+            align-items: center;
+        }
+        .navbar-menu li{
+            padding: 15px;
+        } 
+        .navbar-menu li:hover {
+            background-color: #D8D8D8;
+            border-radius: 3px;
+        }
+        /* 로그인 / 회원가입 / 검색  */
+        .navbar-aut{
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding-right: 32px;
+            padding-left: 0;
+        }
+        .navbar-aut li {
+            padding: 15px;
+            
+        }
+        .navbar-aut li:hover {
+            background-color: #D8D8D8;
+            border-radius: 3px;
+        }
+        /* 메뉴 모달창 */
+        .menu-pan {
+            width: 100%;
+            height: 300px;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            top: 80px;
+            z-index: 999;
+            padding-left: 180px;
+            font-size: 15px;
+            display: none;
+        }
+        .menu-category{
+            float: left;
+            margin: 30px 0;
+        }
+        .category {
+            padding: 20px;
+            margin-right: 100px;
+        }
+        /* 700px 이하일 경우 토글버튼 css */
+        .navbar-togglebtn {
+            position:absolute;
+            right: 15px;
+            font-size: 30px;
+            margin-top: 15px;
+            display: none;
+        }
+        /* 700px 이하일 경우 반응형으로 변경 */
+        @media screen and (max-width: 1000px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+            }
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            .navbar-menu li {
+                width: 100%;
+                text-align: start;
+            }
+            .navbar-aut {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            .navbar-aut li {
+                width: 100%;
+                text-align: start;
+            }
+            .navbar-togglebtn {
+                display: block;
+            }
+            .navbar-menu.active,
+            .navbar-aut.active {
+                display: flex;
+            }
+        }
+        /* 메인 페이지 사진들 CSS */
+        .wrapper {
+            width: 100%;
+            position: absolute;
+            font-family: Pretendard;
+            flex-flow: column;
+        }
+        .outter-box {
+            height: 100ch;
+            align-items: center;
+            display: flex;
+            flex-flow: column nowrap;
+            grid-row-start: 1;
+            grid-column-start: -1;
+            grid-row-end: auto;
+            grid-column-end: auto;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+            z-index: 3;
+        }
+        .inner-box {
+            margin-top: 800px;
+        }
+        .wrapper > div:last-child{border-bottom: 0;}
+        .main-img {
+            position: absolute;
+            width: 100%;
+            height: 100ch;
+        }
+        .navbar-menu-text{
+            font-family: Pretendard;
+            font-weight: 500;
+        }
+        .btn1 {
+            margin-right: 10px;
+            padding: 0;
+            position: relative;
+            align-items: center;
+            width: 250px;
+            height: 40px;
+            border-radius: 4px;
+            border-style: none;
+            background-color: black;
+            color:white;
+            font-family: Pretendard;
+            font-weight: 600;
+        }
+        .btn2 {
+            margin-left: 10px;
+            padding: 0;
+            position: relative;
+            align-items: center;
+            width: 250px;
+            height: 40px;
+            border-radius: 4px;
+            border-style: none;
+            background-color: white;
+            color: black;
+            font-family: Pretendard;
+            font-weight: 600;
+        }
+        .img-text {
+            position: absolute;
+            margin-top: 100px;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+        }
+        .img-text-sub {
+            position: absolute;
+            margin-top: 150px;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+        }
+    </style>
+    <!-- ==========================================================================================JSP 부분========================================================================================= -->
+    <script src="https://kit.fontawesome.com/d5abf4d39e.js" crossorigin="anonymous"></script>
+    <script src="mainPage-toggle.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="mainPage-menu.js" defer></script>
+<!-- ==============================================================================================HTML부분========================================================================================== -->
+<body class="home-page"; id="home-page">
+    <!-- header 시작 -->
+    <div class="header-navbar">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="http://127.0.0.1:5500/mainPage.html#"><img class="logo" src="image/스크린샷 2024-08-19 165441.png" height="70px"></a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#"><span class="navbar-menu-text">제품</span></a></li>
+                <li><a href="#"><span class="navbar-menu-text">회사</span></a></li>
+                <li><a href="#"><span class="navbar-menu-text">채용</span></a></li>
+                <li><a href="#"><span class="navbar-menu-text">문의</span></a></li>
+            </ul>
+            <ul class="navbar-aut">
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li><a href="#"><span class="navbar-menu-text">로그인</span></a></li>
+                <li><a href="#"><span class="navbar-menu-text">회원가입</span></a></li>
+            </ul>
+            <a href="#" class="navbar-togglebtn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+        <!-- 서브 메뉴판 -->
+    </div>
+    <div class="menu-pan">
+        <div class="menu-pan-box">
+            <div class="menu-category">
+                <div class="category"><img class="main-product" alt="모델1"></div>
+            </div>
+            <div class="menu-category">
+                <div class="category"><img class="main-product" alt="모델2"></div>
+            </div>
+            <div class="menu-category">
+                <div class="category"><img class="main-product" alt="모델3"></div>
+            </div>
+            <div class="menu-category">
+                <div class="category"><img class="main-product" alt="모델4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- tbody 시작 -->
+    <tbody class="main-tbody">
+        <div class="wrapper">
+            <div class="outter-box img">
+                <img class="main-img" src="image/전기차1.jpg" alt="전기차 사진">
+                <div class="inner-box">
+                    <button class="btn1 main-1" type="button" onclick="location.href=''">상세보기</button>
+                    <button class="btn2" type="button" onclick="location.href=''">문의하기</button>
+                </div>
+                <h2 class="img-text">EV 배터리</h2>
+                <p class="img-text-sub" style="font-size: 15px;">지금 바로 문의하세요.</p>
+            </div>
+            <div class="outter-box img">
+                <img class="main-img" src="image/전기차2.png" alt="전기차 사진">
+                <div class="inner-box">
+                    <button class="btn1" type="button" onclick="location.href=''">상세보기</button>
+                    <button class="btn2" type="button" onclick="location.href=''">문의하기</button>
+                </div>
+                <h2 class="img-text" style="font-size: 40px;">EV2 배터리</h2>
+                <p class="img-text-sub" style="font-size: 15px;">지금 바로 문의하세요.</p>
+            </div>
+            <div class="outter-box img">
+                <img class="main-img" src="image/태양광.jpg" alt="태양광 사진">
+                <div class="inner-box">
+                    <button class="btn1" type="button" onclick="location.href=''">상세보기</button>
+                    <button class="btn2" type="button" onclick="location.href=''">문의하기</button>
+                </div>
+                <h2 class="img-text" style="font-size: 40px;">태양광 배터리</h2>
+                <p class="img-text-sub" style="font-size: 15px;">재생에너지 배터리 지금 바로 문의하세요.</p>
+            </div>
+            <div class="outter-box img">
+                <img class="main-img" src="image/풍력발전기.jpg" alt="풍력발전기 사진">
+                <div class="inner-box">
+                    <button class="btn1" type="button" onclick="location.href=''">상세보기</button>
+                    <button class="btn2" type="button" onclick="location.href=''">문의하기</button>
+                </div>
+                <h2 class="img-text" style="font-size: 40px;">풍력 배터리</h2>
+                <p class="img-text-sub" style="font-size: 15px;">재생에너지 배터리 지금 바로 문의하세요.</p>
+            </div>
+        </div>
+    </tbody>
+</body>
+</html>
