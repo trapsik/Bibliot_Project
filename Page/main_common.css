@@ -37,8 +37,8 @@ input {
 /* 로고 */
 .navbar-logo{ 
     display: flex;
-    flex: 1;
-    margin: 0px 60px 0px 60px;
+    flex: 1; /*수정*/
+/*     margin: 0px 60px 0px 60px; /*수정(삭졔)*/ */
 }
 a {
     text-decoration: none;
