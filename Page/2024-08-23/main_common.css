@@ -28,7 +28,7 @@ label {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    padding: 14px 3.75%; /*수정*/
+    padding: 0px 52.75px; /*수정*/
 }
 /* 로고 */
 .navbar-logo{ 
