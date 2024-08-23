@@ -493,3 +493,78 @@ a {
 .accountPage-sec-one, .accountPage-sec-two{
     margin-top: auto;
 }
+/*===========================================채용정보페이지css=========================================*/
+.recruitmentPage-slider{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.recruitmentPage-slider img{
+    width: 100%;
+    /* max-height: 800px; */
+}
+.recruitmentPage-slider-text{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.recruitmentPage-slider-subtext{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.recruitmentPage-sec-inform{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.recruitmentPage-sec-inform > div, .recruitmentPage-sec-mainJob > div{
+    justify-content: center;
+    text-align: center;
+}
+.recruitmentPage-sec-inform-title, .recruitmentPage-sec-mainJob-title{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.recruitmentPage-sec-inform-sub{
+    font-size: 16px;
+    margin-bottom: 80px;
+}
+.recruitmentPage-sec-careers > .sec-careers-one, .sec-careers-three{
+    display: flex;
+}
+.recruitmentPage-sec-careers > .sec-careers-two{
+    display: flex;
+    justify-content: flex-end;
+}
+.recruitmentPage-sec-careers img{
+    max-width: 1200px;
+    border-radius: 8px;
+}
+.recruitmentPage-sec-careers > div{
+    margin-bottom: 40px;
+}
+.recruitmentPage-sec-careers > div > div{
+    margin: 0px 5%;
+}
+.recruitmentPage-sec-careers span{
+    font-size: 40px;
+    font-weight: bold;
+}
+.sec-careers-two div{
+    text-align: right;
+    justify-content: right;
+}
+.recruitmentPage-sec-careers > div > div p{
+    font-size: 16px;
+}
