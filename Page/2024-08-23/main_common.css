@@ -568,3 +568,119 @@ a {
 .recruitmentPage-sec-careers > div > div p{
     font-size: 16px;
 }
+/*================================================================================= 회사소개 페이지 css 시작 =========================================================================================== */
+ .introduction-wrapper {
+    height: auto;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    flex-flow: column;
+ }
+ .introduction-main-content-top {
+    width: 100%;
+    position: absolute;
+    font-family: Pretendard;
+ }
+ .introduction-main-content-video {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+ }
+ .introduction-main-content-text {
+    position: relative;
+    /* margin-top:; */
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-top: 120px;
+ }
+ .introduction-main-content-text-sub {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+ }
+ .introduction-main-content-end {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    padding-bottom: 8px;
+    width: 100%;
+    position: absolute;
+    margin-top: 750px;
+ }
+ .main-content-end-box {
+    grid-template-columns: calc(8px * 20) calc(8px *20) calc(8px *20);
+ }
+ .introduction-main-content-end-items {
+    grid-gap: 20px;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+ }
+ .end-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .end-items-icons {
+    font-size: x-large;
+    color: white;
+ }
+ .end-items-icon-text {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+ }
+ .introduction-second-content {
+    text-align: center;
+    margin-top: 140px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+ }
+ .introduction-second-content-text {
+    font-size: 40px;
+    margin: 0px;
+ }
+ .introduction-second-content-sub-text {
+    font-size: 14px;
+ }
+ .introductionPage-to-detailsPage-btn-box{
+    align-items: center;
+    justify-content: center;
+ }
+ .introductionPage-to-detailsPage-btn{
+    padding: 0;
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: black;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    margin-top: 40px;
+ }
+ .introductionPage-to-detailsPage-btn:hover {
+    background-color: #424242;
+ }
+ .introduction-second-content-back {
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+ }
+ .introduction-third-content {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+ }
