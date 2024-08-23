@@ -152,7 +152,7 @@ a {
     text-decoration: underline;
     margin-left: 10px;
 }
-/* 700px 이하일 경우 토글버튼 css */
+/* 1000px 이하일 경우 토글버튼 css */
 .navbar-togglebtn {
     position:absolute;
     right: 15px;
@@ -160,7 +160,7 @@ a {
     margin-top: 15px;
     display: none;
 }
-/* 700px 이하일 경우 반응형으로 변경 */
+/* 1000px 이하일 경우 반응형으로 변경 */
 @media screen and (max-width: 1000px) {
     .navbar {
         flex-direction: column;
