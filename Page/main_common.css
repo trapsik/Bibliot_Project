@@ -32,10 +32,12 @@ input {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+    padding: 14px 3.75%; /*수정*/
 }
 /* 로고 */
 .navbar-logo{ 
     display: flex;
+    flex: 1;
     margin: 0px 60px 0px 60px;
 }
 a {
@@ -49,6 +51,8 @@ a {
     /* margin-left: 40px; */
     padding: 0;
     align-items: center;
+    flex: 1;/*수정*/
+    justify-content: center;/*수정*/
 }
 .navbar-menu li{
     padding: 15px;
@@ -61,6 +65,7 @@ a {
 .navbar-aut{
     list-style: none;
     display: flex;
+    flex: 1;/*수정*/
     margin: 0;
     padding-right: 32px;
     padding-left: 0;
@@ -329,31 +334,17 @@ a {
     background-color: #e2e3e3;
 }
 /*================================================================================= 회원가입 페이지 css 시작 =========================================================================================== */
-.accountPage-information-text-box {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-color: #f4f4f4;
-    width: 320px;
+.accountPage-information-text {
+    width: 300px;
     height: 40px;
     border-radius: 4px;
-    justify-content: space-between;
-    padding-left: 12px;
-}
-.accountPage-information-text-box:hover {
-    box-shadow: inset 0px 0px 0px 0.3px #666;
-}
-.accountPage-information-text {
-    background-color: transparent;
-    border: none;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-    text-overflow: ellipsis;
-    width: 320px;
+    font-size: 14px;
+    border-color: #fff;
+    background-color: #E6E6E6;
+    border: 0; /*input[type=text] border line 제거*/
 }
 .accountPage-account-btn{
-    width: 320px;
+    width: 332px;
     height: 40px;
     border-radius: 4px;
     border-style: none;
@@ -361,12 +352,14 @@ a {
     color:white;
     font-family: Pretendard;
     font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
 }
 .accountPage-account-btn:hover {
     background-color: #58ACFA;
 }
 .accountPage-request-authentication-number {
-    width: 50px;
+    width: 60px; /* 50px 에서 60px로 바꿈*/
     height: 40px;
     background-color: #585858;
     border-radius: 4px;
@@ -377,4 +370,45 @@ a {
 }
 .accountPage-request-authentication-number:hover {
     background-color: #2E2E2E;
+}
+.accountPage-container{
+    display: flex;
+    justify-content: center;
+}
+.accountPage-contents{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.accountPage-title{
+    margin-bottom: 60px;
+    text-align: center;
+}
+.accountPage-sec-agree{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.accountPage-table{
+    margin-bottom: 30px;
+}
+.accountPage-table{
+    border-spacing: 50px;
+}
+.accountPage-table-td-email input,
+.accountPage-table-td-email button{
+    vertical-align: middle;
+}
+.accountPage-sec-footer{
+    font-size: 12px;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+.accountPage-sec-one, .accountPage-sec-two{
+    margin-top: auto;
 }
