@@ -311,7 +311,7 @@ a {
     border-radius: 4px;
     font-size: 14px;
     border-color: #ffffff;
-    background-color: #E6E6E6;
+    background-color: #f4f4f4;
     margin-bottom: 30px;
     border: 0; /*input[type=text] border line 제거*/
 }
